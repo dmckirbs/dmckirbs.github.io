@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résumé — Daniel McKirby</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body class="page-resume">
+
+  <!-- Animated background blobs (shared) -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Top nav bar -->
+  <nav class="topbar">
+    <a href="../index.html" class="back-link">
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M13 4L7 10l6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+    <span class="topbar-title">Résumé</span>
+    <a href="resume.pdf" download class="btn btn-ghost btn-sm">
+      <svg viewBox="0 0 20 20" fill="none" class="btn-icon" aria-hidden="true">
+        <path d="M10 3v10m0 0l-3.5-3.5M10 13l3.5-3.5M4 17h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Download
+    </a>
+  </nav>
+
+  <!-- PDF Viewer card -->
+  <section class="viewer-card" aria-label="Résumé PDF viewer">
+
+    <!-- =====================================================
+         DROP YOUR PDF HERE:
+         Replace "resume.pdf" with the path to your PDF file.
+         The file should sit in the same directory as this HTML.
+         ===================================================== -->
+    <iframe
+      src="resume.pdf"
+      class="pdf-frame"
+      title="Résumé PDF"
+      type="application/pdf"
+    >
+      <!-- Fallback for browsers that can't embed PDFs -->
+      <div class="pdf-fallback">
+        <p>Your browser can't display PDFs inline.</p>
+        <a href="resume.pdf" download class="btn btn-primary">Download Résumé</a>
+      </div>
+    </iframe>
+
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2026 Daniel McKirby</span>
+    <span class="sep">·</span>
+    <a href="mailto:mckirby.d@northeastern.edu">mckirby.d@northeastern.edu</a>
+  </footer>
+
+</body>
+</html>
