@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography — Daniel McKirby</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/photography/style.css" />
+</head>
+
+<!-- ── Contact Modal ── -->
+<div id="contact-modal" class="contact-overlay" role="dialog" aria-modal="true" aria-label="Contact">
+  <div class="contact-card">
+    <span class="tick tick-tl"></span>
+    <span class="tick tick-tr"></span>
+    <span class="tick tick-bl"></span>
+    <span class="tick tick-br"></span>
+
+    <button class="contact-close" onclick="document.getElementById('contact-modal').classList.remove('open')" aria-label="Close">
+      <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/>
+      </svg>
+    </button>
+
+    <div class="contact-label">Contact</div>
+    <div class="contact-name">Daniel McKirby</div>
+    <div class="contact-title-line">Mechanical Engineer</div>
+    <div class="contact-divider"></div>
+
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/>
+        </svg>
+      </div>
+      <a href="mailto:mckirby.d@northeastern.edu" class="contact-link">mckirby.d@northeastern.edu</a>
+    </div>
+
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="1" width="14" height="14" rx="2"/>
+          <path d="M5 7v5M5 4.5v.01M8 12V8c0-1 .5-1.5 1.5-1.5H11"/>
+        </svg>
+      </div>
+      <a href="https://linkedin.com/in/dmckirby" class="contact-link">linkedin.com/in/dmckirby</a>
+    </div>
+
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+            stroke="#60a5fa" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 
+                  19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67 A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91 a16 16 0 0 0 6 6l1.27-1.27 a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <a class="contact-link" href="tel:9733695389">(973) 369-5389</a>
+    </div>
+
+    <p class="contact-note">
+      I'm currently looking for full-time roles in mechanical and design engineering starting early 2027.
+    </p>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('contact-modal');
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.remove('open');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') modal.classList.remove('open');
+  });
+</script>
+
+<body>
+
+  <!-- Background -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="header-name">Daniel McKirby</a>
+      <nav class="header-nav">
+        <a href="/"                      class="nav-link">Home</a>
+        <a href="/engineering/index.html" class="nav-link">Engineering</a>
+        <a href="/photography/"           class="nav-link active">Photography</a>
+      <button class="nav-link" onclick="document.getElementById('contact-modal').classList.add('open')" style="background:none;border:none;cursor:pointer;font-size:inherit;">Contact</button>    </nav>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page intro -->
+  <section class="gallery-hero">
+    <p class="gallery-eyebrow">Photography</p>
+    <p class="gallery-desc">
+      Travel has been one of the most formative parts of my life outside of engineering. Experiencing different cultures, landscapes, and ways of living has given me a perspective I couldn't get from a classroom. Photography is how I hold onto those experiences. It forces me to slow down, pay attention to what's around me, and notice details I'd otherwise walk right past. 
+      What started as a way to document trips has turned into something I genuinely look forward to every time I'm somewhere new.
+    </p>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-rule">
+    <span class="rule-label">Gallery</span>
+  </div>
+
+  <!-- Gallery -->
+  <main class="gallery-wrap">
+    <div class="masonry" id="masonry">
+
+      <!-- Photo items: aspect ratios mix portrait/landscape naturally -->
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Volcán de Fuego, Guatemala photo">
+        <img class="photo-img" src="images/volcan.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Volcán de Fuego, Guatemala</div>
+            <span class="photo-num">01</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open The Duck Stop, Ninh Binh, Vietnam photo">
+        <img class="photo-img" src="images/duck_stop.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">The Duck Stop, Ninh Binh, Vietnam</div>
+            <span class="photo-num">02</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Ninh Binh, Vietnam photo">
+        <img class="photo-img" src="images/ninh_binh.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Ninh Binh, Vietnam</div>
+            <span class="photo-num">03</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Chouara Tannery, Fes, Morocco photo">
+        <img class="photo-img" src="images/chouara.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Chouara Tannery, Fes, Morocco</div>
+            <span class="photo-num">04</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Green Vine Snake, Manuel Antonio National Park, Costa Rica photo">
+        <img class="photo-img" src="images/green_vine.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Green Vine Snake, Manuel Antonio National Park, Costa Rica</div>
+            <span class="photo-num">05</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Vineyard in Samos, Greece photo">
+        <img class="photo-img" src="images/vineyard_grk.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Vineyard in Samos, Greece</div>
+            <span class="photo-num">06</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Ruins of Ephesus, Türkiye photo">
+        <img class="photo-img" src="images/ruins_trk.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Ruins of Ephesus, Türkiye</div>
+            <span class="photo-num">07</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Helmet Headed Lizard, Manuel Antonio National Park, Costa Rica photo">
+        <img class="photo-img" src="images/helmet.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Helmet Headed Lizard, Manuel Antonio National Park, Costa Rica</div>
+            <span class="photo-num">08</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Erg Chebbi, Sahara Desert photo">
+        <img class="photo-img" src="images/erg_chebbi.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Erg Chebbi, Sahara Desert</div>
+            <span class="photo-num">09</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Orange Tree in Chefchaouen, Morocco photo">
+        <img class="photo-img" src="images/orange_tree.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Orange Tree in Chefchaouen, Morocco</div>
+            <span class="photo-num">10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Monteverde Cloud Forest, Costa Rica photo">
+        <img class="photo-img" src="images/monteverde.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Monteverde Cloud Forest, Costa Rica</div>
+            <span class="photo-num">11</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Antigua, Guatemala photo">
+        <img class="photo-img" src="images/antigua.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Antigua, Guatemala</div>
+            <span class="photo-num">07</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Flame Vine in Antigua, Guatemala photo">
+        <img class="photo-img" src="images/flame_vine.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Flame Vine in Antigua, Guatemala</div>
+            <span class="photo-num">13</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Motorbiking in Vietnam photo">
+        <img class="photo-img" src="images/motorbiking.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Motorbiking in Vietnam</div>
+            <span class="photo-num">14</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Upper East Side View, NYC photo">
+        <img class="photo-img" src="images/upper_east.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Upper East Side View, NYC</div>
+            <span class="photo-num">15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Angkor Wat, Cambodia photo">
+        <img class="photo-img" src="images/angkor_wat.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Angkor Wat, Cambodia</div>
+            <span class="photo-num">16</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Koh Yao Yai, Thailand photo">
+        <img class="photo-img" src="images/koh_yao.webp" alt="City skyline at night" style="aspect-ratio:3/4" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Koh Yao Yai, Thailand</div>
+            <span class="photo-num">17</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Volcán Arenal, Costa Rica photo">
+        <img class="photo-img" src="images/arenal.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Volcán Arenal, Costa Rica</div>
+            <span class="photo-num">18</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Pyramid of Khufu, Giza, Egypt photo">
+        <img class="photo-img" src="images/pyramid_khufu.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Pyramid of Khufu, Giza, Egypt</div>
+            <span class="photo-num">19</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Lake Atitlan, Guatemala photo">
+        <img class="photo-img" src="images/lake_atitlan.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Lake Atitlan, Guatemala</div>
+            <span class="photo-num">20</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open View of Petit and Gros Piton, St. Lucia photo">
+        <img class="photo-img" src="images/peti_piton.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">View of Petit and Gros Piton, St. Lucia</div>
+            <span class="photo-num">21</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Kayaking in the San Juan Islands, WA photo">
+        <img class="photo-img" src="images/kayaking.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Kayaking in the San Juan Islands, WA</div>
+            <span class="photo-num">22</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Rainforest in St. Lucia photo">
+        <img class="photo-img" src="images/stlucia_rainforest.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Rainforest in St. Lucia</div>
+            <span class="photo-num">23</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Pyramide du Louvre, Paris, France photo">
+        <img class="photo-img" src="images/louvre.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Pyramide du Louvre, Paris, France</div>
+            <span class="photo-num">24</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open White Mountains, NH photo">
+        <img class="photo-img" src="images/white_mountains.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">White Mountains, NH</div>
+            <span class="photo-num">25</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Khan el-Khalili, Cairo, Egypt photo">
+        <img class="photo-img" src="images/khan_el.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Khan el-Khalili, Cairo, Egypt</div>
+            <span class="photo-num">26</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Hallstatt, Austria photo">
+        <img class="photo-img" src="images/hallstatt.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Hallstatt, Austria</div>
+            <span class="photo-num">27</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open Yosemite Valley, CA photo">
+        <img class="photo-img" src="images/yosemite.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">Yosemite Valley, CA</div>
+            <span class="photo-num">28</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-item" tabindex="0" role="button" aria-label="Open View of Mt. Rainier, WA photo">
+        <img class="photo-img" src="images/rainier.webp" alt="City skyline at night" style="aspect-ratio:16/9" />
+        <div class="photo-overlay">
+          <div class="photo-meta">
+            <div class="photo-caption">View of Mt. Rainier, WA</div>
+            <span class="photo-num">29</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lb-close" aria-label="Close lightbox">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Previous photo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Next photo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+      <div class="lightbox-img-wrap">
+        <span class="tick tick-tl"></span>
+        <span class="tick tick-tr"></span>
+        <span class="tick tick-bl"></span>
+        <span class="tick tick-br"></span>
+        <img class="lightbox-img" id="lb-img" src="" alt="" />
+      </div>
+      <div class="lightbox-footer">
+        <div class="lightbox-caption">
+          <span id="lb-title"></span>
+          <small id="lb-sub"></small>
+        </div>
+        <span class="lightbox-counter" id="lb-counter"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <span>© 2026 Daniel McKirby</span>
+    <span class="sep">·</span>
+    <a href="mailto:mckirby.d@northeastern.edu">mckirby.d@northeastern.edu</a>
+  </footer>
+
+  <script>
+    const photos = Array.from(document.querySelectorAll('.photo-item'));
+    let currentIndex = 0;
+
+    const lb        = document.getElementById('lightbox');
+    const lbImg     = document.getElementById('lb-img');
+    const lbTitle   = document.getElementById('lb-title');
+    const lbSub     = document.getElementById('lb-sub');
+    const lbCounter = document.getElementById('lb-counter');
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const item  = photos[index];
+      const img   = item.querySelector('.photo-img');
+      const cap   = item.querySelector('.photo-caption');
+      const small = item.querySelector('.photo-caption small');
+
+      lbImg.src               = img.src.replace('w=600', 'w=1200');
+      lbImg.alt               = img.alt;
+      lbTitle.textContent     = cap.childNodes[0].textContent.trim();
+      lbSub.textContent       = small ? small.textContent : '';
+      lbCounter.textContent   = `${index + 1} / ${photos.length}`;
+
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      currentIndex = (currentIndex + dir + photos.length) % photos.length;
+      openLightbox(currentIndex);
+    }
+
+    document.getElementById('lb-close').addEventListener('click', closeLightbox);
+    document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
+    document.getElementById('lb-next').addEventListener('click', () => navigate(1));
+
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape')    closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+
+    photos.forEach((item, i) => {
+      item.addEventListener('click', () => openLightbox(i));
+      item.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(i); }
+      });
+    });
+  </script>
+
+</body>
+</html>
