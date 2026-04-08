@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact Tester — Daniel McKirby</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<!-- ── Contact Modal ── -->
+<div id="contact-modal" class="contact-overlay" role="dialog" aria-modal="true" aria-label="Contact">
+  <div class="contact-card">
+    <span class="tick tick-tl"></span><span class="tick tick-tr"></span>
+    <span class="tick tick-bl"></span><span class="tick tick-br"></span>
+    <button class="contact-close" onclick="document.getElementById('contact-modal').classList.remove('open')" aria-label="Close">
+      <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/>
+      </svg>
+    </button>
+    <div class="contact-label">Contact</div>
+    <div class="contact-name">Daniel McKirby</div>
+    <div class="contact-title-line">Mechanical Engineer</div>
+    <div class="contact-divider"></div>
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
+      </div>
+      <a href="mailto:mckirby.d@northeastern.edu" class="contact-link">mckirby.d@northeastern.edu</a>
+    </div>
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M5 7v5M5 4.5v.01M8 12V8c0-1 .5-1.5 1.5-1.5H11"/></svg>
+      </div>
+      <a href="https://linkedin.com/in/dmckirby" class="contact-link">linkedin.com/in/dmckirby</a>
+    </div>
+    <p class="contact-note">I'm currently looking for full-time roles in mechanical and design engineering starting early 2027.</p>
+  </div>
+</div>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="header-name">Daniel McKirby</a>
+    <nav class="header-nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/engineering/" class="nav-link">Engineering</a>
+      <a href="/photography/" class="nav-link">Photography</a>
+      <button class="nav-link" onclick="document.getElementById('contact-modal').classList.add('open')" style="background:none;border:none;cursor:pointer;font-size:inherit;">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<div class="bg-layer" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<main class="proj-main">
+
+  <!-- ── Breadcrumb ── -->
+  <div class="proj-breadcrumb">
+    <a href="/engineering/index.html" class="back-crumb">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4L6 8l4 4"/></svg>
+      Engineering
+    </a>
+    <span class="crumb-sep">/</span>
+    <span class="crumb-current">Thermacell Repellents: Impact Tester</span>
+  </div>
+
+  <!-- ── Page Title ── -->
+  <header class="proj-header">
+    <div class="proj-header-meta">
+      <span class="proj-tag">Project Management · SolidWorks · Mechanical Design · FDM Printing · Shop Tools</span>
+      <span class="proj-date">July – Dec 2025</span>
+    </div>
+    <h1 class="proj-title">Thermacell Repellents:<br><em>Impact Tester</em></h1>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       1. BACKGROUND
+       Text left · Image right
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Background</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <h2 class="proj-section-title">Background</h2>
+      <p class="proj-body">Thermacell Repellents designs spatial mosquito repellers for use in various outdoor environments. The repellers heat a chemical repellent causing it to disperse, resulting in a mosquito-free zone.</p>
+      <p class="proj-body">Over time, these repellers are exposed to wear and tear including being dropped, knocked over, and hit accidentally. During my co-op at this company, I was tasked with designing a custom fixture to recreate common impact forces that a repeller would be exposed to. The reference force I used was a device being struck by a soccer ball.</p>
+    </div>
+    <div class="proj-split-right">
+      <div class="proj-inline-media">
+        <img src="media/th1.webp" alt="Impact tester overview" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       2. CONSTRAINTS
+       Numbered list left · Image right
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Constraints</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <h2 class="proj-section-title">Constraints</h2>
+      <p class="proj-body">The main design requirements for the impact tester were:</p>
+      <ol class="proj-numbered">
+        <li>The new design must improve upon the limitations of the previous design</li>
+        <li>The fixture must be easy to move and store. Weight must be kept low in order to move it easily, and general size must be small enough to fit under a work bench.</li>
+        <li>The fixture must be compatible with all Thermacell products.</li>
+      </ol>
+    </div>
+    <div class="proj-split-right">
+      <div class="proj-inline-media">
+        <img src="media/th2.webp" alt="Constraint reference diagram" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       3. CUSTOM DESIGNS
+       Two square images + one wide (16:9)
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Designs</span></div>
+
+  <section class="proj-section">
+    <h2 class="proj-section-title">Custom Designs</h2>
+    <p class="proj-body">Custom parts were a huge part of this project. I designed various plates, gears, and plastic components to ensure test repeatability and safety in use. These design objectives could not be fulfilled from purchased components.</p>
+    <div class="proj-designs-grid">
+      <!-- Square A -->
+      <div class="proj-designs-sq">
+        <div class="proj-inline-media proj-inline-media--sq">
+          <img src="media/th3.webp" alt="Design A" />
+        </div>
+        <p class="proj-caption">Steel gear designed to fit custom pawl. Gear allows impact arm to be raised to exact 10 degree increments.</p>
+      </div>
+      <!-- Square B -->
+      <div class="proj-designs-sq">
+        <div class="proj-inline-media proj-inline-media--sq">
+          <img src="media/th4.webp" alt="Design B" />
+        </div>
+        <p class="proj-caption">Steel plate designed to house rotating shafts, roller bearings, and mounting brackets.</p>
+      </div>
+      <!-- Wide 16:9 -->
+      <div class="proj-designs-wide">
+        <div class="proj-inline-media proj-inline-media--wide">
+          <img src="media/th5.webp" alt="Design overview" />
+        </div>
+        <p class="proj-caption">Plastic (PET) plate cover designed to be both flexible and take the main force of the impact. This piece allowed me to recreate any impact environment by attaching various surfaces (i.e. rubber)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       4. DESIGN ITERATIONS
+       Bullet list above · Horizontal progress diagram below
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Iterations</span></div>
+
+  <section class="proj-section">
+    <h2 class="proj-section-title">Design Iterations</h2>
+    <ul class="proj-bullets proj-bullets--spaced">
+      <li>Brainstormed and refined designs for the fixture, evolving from initial wooden concepts to a modular aluminum frame using 8020 for enhanced strength and accuracy</li>
+      <li>Transitioned from manual operation to a mechanical gear system with adjustable impact plates and modular arms for customizable weights and surfaces.</li>
+      <li>Addressed assembly challenges by finalizing custom part tolerances and testing ideas through 3D printing</li>
+    </ul>
+
+    <!-- Horizontal iteration diagram — one wide image spanning full width -->
+    <div class="proj-iter-diagram">
+      <img src="media/th6.webp" alt="Iteration progression diagram" />
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       5. ISSUES
+       Text left · Image right
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Issues</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <h2 class="proj-section-title">Issues</h2>
+      <p class="proj-body">Issues came up during the assembly of this fixture. One major problem I encountered was that there was too much force on the pawl (seen in green) to dislodge it from the gear (seen in purple). A redesign of the pawl geometry with more rounded corners, and perhaps contact at a different angle is necessary going forward. These changes along with some more lubrication will make the disengagement process much smoother.</p>
+    </div>
+    <div class="proj-split-right">
+      <div class="proj-inline-media">
+        <img src="media/th7.webp" alt="Issues illustration" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       6. RESULTS
+       Text above · Large video embed below
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Results</span></div>
+
+  <section class="proj-section">
+    <h2 class="proj-section-title">Results</h2>
+    <p class="proj-body proj-body--wide">The completed impact tester gave Thermacell its first standardized method for conducting repeatable durability tests across its product line. The fixture can simulate a range of impact scenarios by adjusting the arm angle in 10-degree increments and swapping out the modular impact plate surfaces. Before this project, there was no consistent way to test how products held up to common impacts like being knocked over or struck.</p>
+    <p class="proj-body proj-body--wide">The pawl disengagement issue identified during assembly remains an open item. A redesign with rounded geometry and a revised contact angle would reduce the force needed to release the arm and make the fixture safer and smoother to operate. With that fix, the tester is ready for integration into Thermacell's QA workflow for both current and future products.</p>
+
+    <!-- Large video embed -->
+    <div class="proj-video-wrap proj-video-wrap--lg">
+      <video controls>
+        <source src="media/th8.mp4" type="video/mp4" />
+      </video>
+
+    </div>
+  </section>
+
+  <!-- ── Prev / Next ── -->
+  <nav class="proj-nav">
+    <a href="#" class="proj-nav-btn proj-nav-btn--prev">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4L6 8l4 4"/></svg>
+      <span>
+        <span class="proj-nav-label">Previous</span>
+        <span class="proj-nav-name">Project name</span>
+      </span>
+    </a>
+    <a href="#" class="proj-nav-btn proj-nav-btn--next">
+      <span>
+        <span class="proj-nav-label">Next</span>
+        <span class="proj-nav-name">Project name</span>
+      </span>
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 Daniel McKirby</span>
+  <span class="sep">·</span>
+  <a href="mailto:mckirby.d@northeastern.edu">mckirby.d@northeastern.edu</a>
+</footer>
+
+<script>
+  const modal = document.getElementById('contact-modal');
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+</script>
+
+</body>
+</html>
