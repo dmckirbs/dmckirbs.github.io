@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spark Plasma Sintering — Daniel McKirby</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<!-- ── Contact Modal ── -->
+<div id="contact-modal" class="contact-overlay" role="dialog" aria-modal="true" aria-label="Contact">
+  <div class="contact-card">
+    <span class="tick tick-tl"></span><span class="tick tick-tr"></span>
+    <span class="tick tick-bl"></span><span class="tick tick-br"></span>
+    <button class="contact-close" onclick="document.getElementById('contact-modal').classList.remove('open')" aria-label="Close">
+      <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/>
+      </svg>
+    </button>
+    <div class="contact-label">Contact</div>
+    <div class="contact-name">Daniel McKirby</div>
+    <div class="contact-title-line">Mechanical Engineer</div>
+    <div class="contact-divider"></div>
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
+      </div>
+      <a href="mailto:mckirby.d@northeastern.edu" class="contact-link">mckirby.d@northeastern.edu</a>
+    </div>
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M5 7v5M5 4.5v.01M8 12V8c0-1 .5-1.5 1.5-1.5H11"/></svg>
+      </div>
+      <a href="https://linkedin.com/in/dmckirby" class="contact-link">linkedin.com/in/dmckirby</a>
+    </div>
+    <p class="contact-note">I'm currently looking for full-time roles in mechanical and design engineering starting early 2027.</p>
+  </div>
+</div>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="header-name">Daniel McKirby</a>
+    <nav class="header-nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/engineering/" class="nav-link">Engineering</a>
+      <a href="/photography/" class="nav-link">Photography</a>
+      <button class="nav-link" onclick="document.getElementById('contact-modal').classList.add('open')" style="background:none;border:none;cursor:pointer;font-size:inherit;">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<div class="bg-layer" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<main class="proj-main">
+
+  <!-- ── Breadcrumb ── -->
+  <div class="proj-breadcrumb">
+    <a href="/engineering/index.html" class="back-crumb">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4L6 8l4 4"/></svg>
+      Engineering
+    </a>
+    <span class="crumb-sep">/</span>
+    <span class="crumb-current">Spark Plasma Sintering of Ceramic Matrix Composites for Turbine Applications</span>
+  </div>
+
+  <!-- ── Page Title ── -->
+  <header class="proj-header">
+    <div class="proj-header-meta">
+      <span class="proj-tag">SPS Process Fundamentals · Academic Research · Technical Writing</span>
+      <span class="proj-date">Spring 2026 | Co-authored with Reid Vaughan</span>
+    </div>
+    <h1 class="proj-title">Spark Plasma Sintering of Ceramic Matrix Composites for Turbine Applications</h1>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       1. Overview
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Overview</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <h2 class="proj-section-title">Overview</h2>
+      <p class="proj-body">As part of my advanced materials engineering coursework (ME5600), I co-authored an academic paper investigating spark plasma sintering (SPS) as a fabrication route for ceramic matrix composites (CMCs) used in gas turbine applications. The paper examines the SPS process, how it compares to conventional CMC fabrication methods, and whether it can realistically compete for production-scale turbine components.</p>
+    </div>
+    <div class="proj-split-right">
+      <div class="proj-inline-media">
+        <img src="media/p1.webp" alt="Issues illustration" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       2. Background
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Background</span></div>
+
+  <section class="proj-section">
+    <h2 class="proj-section-title">Background</h2>
+    <p class="proj-body proj-body--wide ">CMCs, particularly SiC/SiC systems, are replacing nickel superalloys in hot-section turbine components because they operate at higher temperatures at roughly a third of the weight. The established fabrication routes (chemical vapor infiltration, melt infiltration, and polymer infiltration and pyrolysis) each involve significant tradeoffs in processing time, cost, and achievable density. CVI, for example, can require weeks of furnace time. SPS takes a fundamentally different approach: applying pulsed direct current heating with uniaxial pressure to achieve near-full density in minutes rather than days, at lower temperatures than conventional sintering.</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       3. Paper Scope
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Paper Scope</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <h2 class="proj-section-title">Paper Scope</h2>
+      <p class="proj-body">The paper covers six main areas: the fundamentals of the SPS process and its densification mechanisms, the history and prominent researchers behind the technology (from Bloxam's 1906 work through Tokita's commercialization in the 1990s), current debates in the field (including whether plasma actually forms during SPS, the oxide vs. non-oxide CMC tradeoff for turbine environments, and whether SPS can challenge MI and CVI at production scale), recent advances in high-pressure SPS and the integration of additive manufacturing with SPS for complex geometries, and the key drawbacks that currently limit adoption, including geometric constraints from uniaxial loading, thermal gradients in larger parts, and graphite tooling limitations.</p>
+    </div>
+    <div class="proj-split-right">
+      <div class="proj-inline-media">
+        <img src="media/p2.webp" alt="Issues illustration" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       4. Contributions
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Contributions</span></div>
+
+  <section class="proj-section">
+    <h2 class="proj-section-title">My Contributions</h2>
+    <p class="proj-body proj-body--wide ">I was responsible for the sections on SPS process fundamentals, the comparative analysis of fabrication routes, the drawbacks section, and building the IEEE-formatted reference list from journal articles and conference proceedings. Writing this paper required synthesizing information across dozens of sources and critically evaluating claims, particularly around SPS's scalability and the still-unresolved debate over its actual sintering mechanisms.</p>
+    
+    <!-- Horizontal iteration diagram — one wide image spanning full width -->
+    <div class="proj-iter-diagram">
+      <img src="media/p3.webp" alt="Iteration progression diagram" />
+    </div>
+  </section>
+
+  <!-- ── Prev / Next ── -->
+  <nav class="proj-nav">
+    <a href="../insulet/" class="proj-nav-btn proj-nav-btn--prev">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4L6 8l4 4"/></svg>
+      <span>
+        <span class="proj-nav-label">Previous</span>
+        <span class="proj-nav-name">Insulet Corporation: GEE Mechanical Design Co-op</span>
+      </span>
+    </a>
+    <a href="../cessna/" class="proj-nav-btn proj-nav-btn--next">
+      <span>
+        <span class="proj-nav-label">Next</span>
+        <span class="proj-nav-name">Cessna 172-S: Wing and Horizontal Stabilizer Downwash Analysis</span>
+      </span>
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 Daniel McKirby</span>
+  <span class="sep">·</span>
+  <a href="mailto:mckirby.d@northeastern.edu">mckirby.d@northeastern.edu</a>
+</footer>
+
+<script>
+  const modal = document.getElementById('contact-modal');
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+</script>
+
+</body>
+</html>
