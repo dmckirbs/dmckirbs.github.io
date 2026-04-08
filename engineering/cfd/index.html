@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cessna 172-S — Daniel McKirby</title>
+  <title>CFD — Daniel McKirby</title>
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -77,95 +77,65 @@
   <!-- ── Page Title ── -->
   <header class="proj-header">
     <div class="proj-header-meta">
-      <span class="proj-tag">CFD · Aerodynamics · ANSYS Fluent</span>
+      <span class="proj-tag">MATLAB · ANSYS Fluent · ANSYS DesignModeler · SOR Numerical Methods · Mesh Independence Analysis · Turbulence Modeling · Technical Report Writing</span>
       <span class="proj-date">Spring 2026</span>
     </div>
-    <h1 class="proj-title">Cessna 172-S:<br><em>Wing and Horizontal Stabilizer Downwash Analysis</em></h1>
+    <h1 class="proj-title">Computational Fluid Dynamics<br><em>Coursework</em></h1>
   </header>
 
   <!-- ══════════════════════════════════════════
-       1. OVERVIEW — full-width text, no image
+       1. Project 1
   ══════════════════════════════════════════ -->
-  <div class="proj-rule"><span class="proj-rule-label">Overview</span></div>
+  
+  <div class="proj-rule"><span class="proj-rule-label">Project 1</span></div>
 
   <section class="proj-section">
-    <h2 class="proj-section-title">Overview</h2>
-    <p class="proj-body proj-body--wide">The objective of this project was to model the 2D flow over the main wing and horizontal stabilizer of a Cessna 172-S at cruise conditions using ANSYS Fluent. The goal was to observe how the main wing's downwash affects the lift and drag on the horizontal stabilizer at different angles of attack — a fundamental aerodynamic interaction in conventional aircraft design.</p>
+    <h2 class="proj-section-title">Project 1: L-Shaped Duct Potential Flow via SOR in MATLAB</h2>
+    <p class="proj-body proj-body--wide ">This project involved solving Laplace's equation for incompressible, irrotational flow through an L-shaped duct with a notch removed from the bottom-left corner. I implemented the Successive Over-Relaxation (SOR) method in MATLAB, applying boundary conditions for a uniform inlet velocity, zero normal gradient along walls, and a zero streamwise velocity gradient at the outlet. From the converged velocity potential, I derived the full velocity field, pressure distribution (via Bernoulli's equation), and stream function. A mesh independence study across four grid refinements (Nx = 21 to 161) confirmed the solution was converging, with the finest grid used for final results.</p>    
+    <!-- Horizontal iteration diagram — one wide image spanning full width -->
+    <div class="proj-iter-diagram">
+      <img src="media/cfd1.webp" alt="Iteration progression diagram" />
+    </div>
   </section>
 
   <!-- ══════════════════════════════════════════
-       2. GEOMETRY SETUP — text left, two stacked images right
+       2. Project 2
   ══════════════════════════════════════════ -->
-  <div class="proj-rule"><span class="proj-rule-label">Geometry Setup</span></div>
+  <div class="proj-rule"><span class="proj-rule-label">Project 2</span></div>
 
   <section class="proj-section proj-split">
     <div class="proj-split-left">
-      <h2 class="proj-section-title">Geometry Setup</h2>
+      <h2 class="proj-section-title">Project 2: Lid-Driven Cavity - Reproducing the Ghia et al. Benchmark</h2>
       <p class="proj-body">The Cessna 172-S uses a NACA 2412 airfoil for the main wing and a NACA 0012 symmetric airfoil for the horizontal stabilizer. Airfoil coordinate data for both profiles was sourced from airfoiltools.com and imported into ANSYS DesignModeler. Setting up the geometry required more than just placing two airfoils in a domain. I referenced the Cessna 172-S Pilot Operating Handbook to determine the main wing's Mean Aerodynamic Chord (58.8 in, from the Airplane Weighing Form), and calculated the stabilizer MAC from the taper ratio using root and tip chord measurements found in reference drawings (yielding an MAC of 1.129 m). The horizontal and vertical offset between the wing and stabilizer were estimated from the POH's three-view drawing using the fuselage station and waterline coordinate system. The stabilizer was positioned 169.1 in aft and 30 in below the main wing, then rotated to its -3 degree incidence angle. The flow domain extended 20 chord lengths upstream, 30 downstream, and 20 above and below the airfoils.</p>
     </div>
     <div class="proj-split-right">
       <!-- Two images stacked vertically -->
       <div class="proj-stacked-media">
         <div class="proj-inline-media">
-          <img src="media/c1.webp" alt="Geometry setup — domain overview" />
+          <img src="media/cfd2.webp" alt="Geometry setup — domain overview" />
           <!-- <div class="proj-media-placeholder"><span class="placeholder-text">Geometry image 1</span></div> -->
         </div>
         <div class="proj-inline-media">
-          <img src="media/c2.webp" alt="Geometry setup — airfoil positioning" />
+          <img src="media/cfd3.webp" alt="Geometry setup — airfoil positioning" />
           <!-- <div class="proj-media-placeholder"><span class="placeholder-text">Geometry image 2</span></div> -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════
-       3. FLOW CONDITIONS & SOLVER SETUP — text left, one image right
-  ══════════════════════════════════════════ -->
-  <div class="proj-rule"><span class="proj-rule-label">Flow Conditions &amp; Solver Setup</span></div>
-
-  <section class="proj-section proj-split">
-    <div class="proj-split-left">
-      <h2 class="proj-section-title">Flow Conditions &amp; Solver Setup</h2>
-      <p class="proj-body">Cruise conditions at 10,000 ft were taken from the POH: a cruise speed of approximately 122 KTAS (62.8 m/s), with air density of 0.9046 kg/m³ and dynamic viscosity of 1.694 x 10⁻⁵ Pa·s from the International Standard Atmosphere. This gave a Reynolds number of approximately 5 x 10⁶, justifying the use of the SST k-omega turbulence model. To simulate different airplane attitudes, the freestream velocity was decomposed into x and y components at the inlet for each angle of attack (0, 2, 4, 6, and 8 degrees), and the lift and drag reference directions were updated accordingly for each case.</p>
-    </div>
-    <div class="proj-split-right">
-      <div class="proj-inline-media">
-        <img src="media/c3.webp" alt="Mesh and boundary conditions" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       4. RESULTS — text left, one image right
-  ══════════════════════════════════════════ -->
-  <div class="proj-rule"><span class="proj-rule-label">Results</span></div>
-
-  <section class="proj-section proj-split">
-    <div class="proj-split-left">
-      <h2 class="proj-section-title">Results</h2>
-      <p class="proj-body">The stabilizer produced negative lift at all angles of attack, which is expected since the horizontal stabilizer on a conventional aircraft generates a downward force to balance the wing's nose-down pitching moment. As airplane AoA increased from 0 to 8 degrees, the stabilizer lift coefficient became less negative, moving from -0.3233 to -0.1863. This occurs because the main wing produces greater downwash at higher angles of attack, which reduces the effective angle of attack seen by the stabilizer.</p>
-      <p class="proj-body">The drag coefficient shifted from positive (0.0123 at 0 degrees) to negative (-0.01 at 8 degrees), indicating that at higher AoA the downwash tilts the flow enough at the stabilizer to produce a forward force component from the pressure distribution. The velocity and pressure contours confirmed the interaction: the wing's trailing edge wake was visible as a region of reduced velocity propagating downstream toward the stabilizer, deflecting further downward with increasing AoA.</p>
-    </div>
-    <div class="proj-split-right">
-      <div class="proj-inline-media">
-        <img src="media/c4.webp" alt="Pressure and velocity contours" />
-      </div>
-    </div>
-  </section>
-
   <!-- ── Prev / Next ── -->
   <nav class="proj-nav">
-    <a href="../sps/" class="proj-nav-btn proj-nav-btn--prev">
+    <a href="../cessna/" class="proj-nav-btn proj-nav-btn--prev">
       <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4L6 8l4 4"/></svg>
       <span>
         <span class="proj-nav-label">Previous</span>
-        <span class="proj-nav-name">SPS Paper</span>
+        <span class="proj-nav-name">Cessna 172-S: Wing and Horizontal Stabilizer Downwash Analysis</span>
       </span>
     </a>
-    <a href="../cfd/" class="proj-nav-btn proj-nav-btn--next">
+    <a href="../geothermal-exhibit/" class="proj-nav-btn proj-nav-btn--next">
       <span>
         <span class="proj-nav-label">Next</span>
-        <span class="proj-nav-name">Computational Fluid Dynamics</span>
+        <span class="proj-nav-name">Geothermal Energy Museum Exhibit</span>
       </span>
       <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg>
     </a>
