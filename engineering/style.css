@@ -868,6 +868,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.25rem;
+  padding: 1rem 1rem 1rem 1rem; 
 }
 
 .eng-card {
@@ -1078,5 +1079,71 @@ body {
   }
   .eng-hero-meta {
     justify-content: flex-start;
+  }
+}
+
+/* ── Banner card: full-width, image top / content bottom ── */
+.eng-card--banner {
+  grid-column: span 6;
+  flex-direction: column;
+}
+
+.eng-card--banner .eng-card-media {
+  width: 100%;
+  aspect-ratio: 21 / 7;   /* wide cinematic strip */
+  flex-shrink: 0;
+}
+
+.eng-card--banner .eng-card-body {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 0.1fr auto;
+  column-gap: 2rem;
+  align-items: start;
+}
+
+.eng-card--banner .eng-card-title {
+  font-size: 1.6rem;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.eng-card--banner .eng-card-desc {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 72ch;
+}
+
+.eng-card--banner .eng-card-footer {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-self: stretch;
+  margin-top: 0;
+  min-width: 160px;
+}
+
+.eng-card--banner .eng-card-pills {
+  justify-content: flex-end;
+}
+
+/* Responsive: banner collapses like featured on small screens */
+@media (max-width: 900px) {
+  .eng-card--banner {
+    grid-column: span 12;
+  }
+  .eng-card--banner .eng-card-media {
+    aspect-ratio: 16 / 7;
+  }
+  .eng-card--banner .eng-card-body {
+    grid-template-columns: 1fr;
+  }
+  .eng-card--banner .eng-card-footer {
+    grid-column: 1;
+    grid-row: 3;
+    flex-direction: row;
+    align-items: center;
   }
 }
