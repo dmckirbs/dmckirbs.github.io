@@ -868,7 +868,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.25rem;
-  padding: 1rem 1rem 1rem 1rem; 
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .eng-card {
@@ -1084,7 +1084,7 @@ body {
 
 /* ── Banner card: full-width, image top / content bottom ── */
 .eng-card--banner {
-  grid-column: span 6;
+  grid-column: span 8;
   flex-direction: column;
 }
 
