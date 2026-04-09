@@ -71,7 +71,7 @@
       Engineering
     </a>
     <span class="crumb-sep">/</span>
-    <span class="crumb-current">Cessna 172-S Downwash Analysis</span>
+    <span class="crumb-current">Computational Fluid Dynamics</span>
   </div>
 
   <!-- ── Page Title ── -->
@@ -106,7 +106,8 @@
   <section class="proj-section proj-split">
     <div class="proj-split-left">
       <h2 class="proj-section-title">Project 2: Lid-Driven Cavity - Reproducing the Ghia et al. Benchmark</h2>
-      <p class="proj-body">The Cessna 172-S uses a NACA 2412 airfoil for the main wing and a NACA 0012 symmetric airfoil for the horizontal stabilizer. Airfoil coordinate data for both profiles was sourced from airfoiltools.com and imported into ANSYS DesignModeler. Setting up the geometry required more than just placing two airfoils in a domain. I referenced the Cessna 172-S Pilot Operating Handbook to determine the main wing's Mean Aerodynamic Chord (58.8 in, from the Airplane Weighing Form), and calculated the stabilizer MAC from the taper ratio using root and tip chord measurements found in reference drawings (yielding an MAC of 1.129 m). The horizontal and vertical offset between the wing and stabilizer were estimated from the POH's three-view drawing using the fuselage station and waterline coordinate system. The stabilizer was positioned 169.1 in aft and 30 in below the main wing, then rotated to its -3 degree incidence angle. The flow domain extended 20 chord lengths upstream, 30 downstream, and 20 above and below the airfoils.</p>
+      <p class="proj-body">The Ghia et al. lid-driven cavity is one of the most widely used validation cases in CFD. I recreated the 2D square cavity in ANSYS Fluent at Re = 10,000, with the top wall moving at 1 m/s and all other walls stationary. A mesh independence study across four structured grids (32x32 through 256x256) showed the 128x128 and 256x256 results were nearly identical, so the 256x256 mesh was selected for the remaining analyses. Comparing the centerline velocity profiles against Ghia's published data showed good agreement, with most points falling within 1-5% error.</p>
+      <p class="proj-body">I then ran six turbulence models (Spalart-Allmaras, three k-epsilon variants, k-omega Standard, and k-omega SST) on the same mesh and compared them against the laminar baseline. The laminar model matched the benchmark most closely, which was expected since Ghia solved the laminar Navier-Stokes equations. Among the turbulence models, k-omega SST performed best, while the k-epsilon variants underpredicted peak velocities by 40-50%.</p>
     </div>
     <div class="proj-split-right">
       <!-- Two images stacked vertically -->
