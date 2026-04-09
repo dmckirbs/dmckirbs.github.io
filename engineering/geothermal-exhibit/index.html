@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geothermal Exhibit — Daniel McKirby</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<!-- ── Contact Modal ── -->
+<div id="contact-modal" class="contact-overlay" role="dialog" aria-modal="true" aria-label="Contact">
+  <div class="contact-card">
+    <span class="tick tick-tl"></span><span class="tick tick-tr"></span>
+    <span class="tick tick-bl"></span><span class="tick tick-br"></span>
+    <button class="contact-close" onclick="document.getElementById('contact-modal').classList.remove('open')" aria-label="Close">
+      <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="1" y1="1" x2="11" y2="11"/><line x1="11" y1="1" x2="1" y2="11"/>
+      </svg>
+    </button>
+    <div class="contact-label">Contact</div>
+    <div class="contact-name">Daniel McKirby</div>
+    <div class="contact-title-line">Mechanical Engineer</div>
+    <div class="contact-divider"></div>
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="14" height="10" rx="1.5"/><polyline points="1,3 8,9.5 15,3"/></svg>
+      </div>
+      <a href="mailto:mckirby.d@northeastern.edu" class="contact-link">mckirby.d@northeastern.edu</a>
+    </div>
+    <div class="contact-row">
+      <div class="contact-icon">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M5 7v5M5 4.5v.01M8 12V8c0-1 .5-1.5 1.5-1.5H11"/></svg>
+      </div>
+      <a href="https://linkedin.com/in/dmckirby" class="contact-link">linkedin.com/in/dmckirby</a>
+    </div>
+    <p class="contact-note">I'm currently looking for full-time roles in mechanical and design engineering starting early 2027.</p>
+  </div>
+</div>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="header-name">Daniel McKirby</a>
+    <nav class="header-nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/engineering/" class="nav-link nav-link--active">Engineering</a>
+      <a href="/photography/" class="nav-link">Photography</a>
+      <button class="nav-link" onclick="document.getElementById('contact-modal').classList.add('open')" style="background:none;border:none;cursor:pointer;font-size:inherit;">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<div class="bg-layer" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<main class="proj-main">
+
+  <!-- ── Breadcrumb ── -->
+  <div class="proj-breadcrumb">
+    <a href="/engineering/" class="back-crumb">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4L6 8l4 4"/></svg>
+      Engineering
+    </a>
+    <span class="crumb-sep">/</span>
+    <span class="crumb-current">Cessna 172-S Downwash Analysis</span>
+  </div>
+
+  <!-- ── Page Title ── -->
+  <header class="proj-header">
+    <div class="proj-header-meta">
+      <span class="proj-tag">Programming · Memo Writing · SolidWorks</span>
+      <span class="proj-date">Jan - Apr 2023</span>
+    </div>
+    <h1 class="proj-title">Geothermal Energy Museum<br><em>Exhibit</em></h1>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       1. Overview
+  ══════════════════════════════════════════ -->
+  
+  <div class="proj-rule"><span class="proj-rule-label">Overview</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <h2 class="proj-section-title">Overview</h2>
+      <p class="proj-body">For my Cornerstone engineering project, I worked on a team of four to design and build a portable museum exhibit that teaches elementary school students how geothermal energy works. The exhibit was presented to kids at an engineering expo, where they could interact with it hands-on. I served as rotating project lead, handled all of the programming, did most of the CAD work, and shared manufacturing responsibilities equally with the team. As project lead, I presented progress updates to the class and wrote a formal project memo.</p>
+    </div>
+    <div class="proj-split-right">
+      <div class="proj-inline-media">
+        <img src="media/geo1.webp" alt="Mesh and boundary conditions" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       2. Project 2
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">The Exhibit</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <div class="proj-inline-media">
+        <img src="media/geo2.webp" alt="Mesh and boundary conditions" />
+      </div>
+    </div>
+    <div class="proj-split-right">
+      <h2 class="proj-section-title">The Exhibit</h2>
+      <p class="proj-body">The exhibit had two interactive components. The first was a physical breakdown of a geothermal system with LEDs representing the flow of steam and water through the cycle. Visitors could turn a dial to adjust the rate of steam generation, which changed the LED animation speed in real time. The second component was a laser-carved world map with push buttons at the locations of real geothermal power plants. Pressing a button would bring up information about that plant on a connected display, letting kids explore where geothermal energy is actually being used around the world.</p>
+    </div>
+  </section>
+
+ <!-- ══════════════════════════════════════════
+       3. Design and Programming
+  ══════════════════════════════════════════ -->
+  
+  <div class="proj-rule"><span class="proj-rule-label">Design and Programming</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <h2 class="proj-section-title">Design and Programming</h2>
+      <p class="proj-body">I modeled the exhibit housing and internal layout in SolidWorks, designing around the constraints of portability (it needed to be carried to the expo), durability (elementary schoolers would be using it), and ease of assembly. On the programming side, I wrote the code in C++ to run an Arduino-based control system that handled both the LED lighting sequences for the geothermal model and the interactive map display. A separate MATLAB script drove the slideshow component of the display.</p>
+    </div>
+    <div class="proj-split-right">
+      <div class="proj-inline-media">
+        <img src="media/geo3.webp" alt="Mesh and boundary conditions" />
+      </div>
+    </div>
+  </section>
+
+<!-- ══════════════════════════════════════════
+       4. Manufacturing and Assembly
+  ══════════════════════════════════════════ -->
+  <div class="proj-rule"><span class="proj-rule-label">Manufacturing and Assembly</span></div>
+
+  <section class="proj-section">
+    <h2 class="proj-section-title">Manufacturing and Assembly</h2>
+    <p class="proj-body proj-body--wide ">The exhibit was built from wood, acrylic, and internal wiring, all cut and assembled by hand. The laser-carved map was one of the more involved fabrication pieces, requiring precise alignment of the button cutouts with the engraved plant locations. The Arduino and wiring were integrated into the housing so that all electronics were concealed and protected during transport and use.</p>
+    <div class="proj-iter-left">
+      <img src="media/geo4.webp" alt="Iteration progression diagram" />
+      <img src="media/geo5.webp" alt="Iteration progression diagram" />
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       5. Results
+  ══════════════════════════════════════════ -->
+  
+  <div class="proj-rule"><span class="proj-rule-label">Results</span></div>
+
+  <section class="proj-section proj-split">
+    <div class="proj-split-left">
+      <h2 class="proj-section-title">Results</h2>
+      <p class="proj-body">The finished exhibit was presented at the engineering expo to elementary school students, who interacted with both the steam generation dial and the world map buttons. The exhibit successfully held kids' attention and communicated the basics of how geothermal energy is captured and where it's used globally.</p>    </div>
+    <div class="proj-split-right">
+      <div class="proj-inline-media">
+        <img src="media/geo6.webp" alt="Mesh and boundary conditions" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Prev / Next ── -->
+  <nav class="proj-nav">
+    <a href="../cfd/" class="proj-nav-btn proj-nav-btn--prev">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4L6 8l4 4"/></svg>
+      <span>
+        <span class="proj-nav-label">Previous</span>
+        <span class="proj-nav-name">Computational Fluid Dynamics</span>
+      </span>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 Daniel McKirby</span>
+  <span class="sep">·</span>
+  <a href="mailto:mckirby.d@northeastern.edu">mckirby.d@northeastern.edu</a>
+</footer>
+
+<script>
+  const modal = document.getElementById('contact-modal');
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+</script>
+
+</body>
+</html>
