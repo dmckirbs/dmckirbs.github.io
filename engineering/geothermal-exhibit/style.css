@@ -160,7 +160,7 @@
   max-width: 60ch;
   margin-bottom: 1rem;
 }
-.proj-body--wide { max-width: 80ch; }
+.proj-body--wide { max-width: 200ch; }
 .proj-body:last-child { margin-bottom: 0; }
 
 /* ── Bullet Lists ── */
